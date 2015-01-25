@@ -1,11 +1,22 @@
 package main
 
-import "github.com/go-martini/martini"
+import (
+	//"fmt"
+	"github.com/go-martini/martini"
+	"github.com/martini-contrib/render"
+	//"net/http"
+)
 
 func main() {
   m := martini.Classic()
-  m.Get("/", func() string {
-    return "Hello world!"
+  m.Use(render.Renderer(render.Options{
+	Layout: "layoutIndex",
+	Extensions: []string{".tmpl", ".html"},
+  }))
+  
+  m.Get("/", func(ren render.Render) {
+	
+	ren.HTML(200, "video", nil)
   })
   m.Run()
 }

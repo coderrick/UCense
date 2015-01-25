@@ -1,0 +1,12 @@
+section{
+	display: flex-box;
+}
+body{
+	position: relative;
+	margin: auto 0;
+}
+iframe{
+	height: 390px;
+	width:640px;
+	/*float:right;*/
+}
