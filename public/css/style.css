@@ -1,12 +1,20 @@
 section{
-	display: flex-box;
-}
-body{
-	position: relative;
+	display: block;
 	margin: auto 0;
 }
+body{
+	
+}
 iframe{
+	display: block;
 	height: 390px;
 	width:640px;
+	margin: 0 auto;
 	/*float:right;*/
+}
+#bttns{
+	text-align:center;
+}
+h1{
+	text-align:center;
 }
